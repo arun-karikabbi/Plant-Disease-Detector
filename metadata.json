@@ -1,0 +1,10 @@
+{
+  "name": "LeafCare AI",
+  "description": "Plant disease detector and farming advisor for smallholder farmers.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

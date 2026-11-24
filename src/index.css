@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Poppins", system-ui, -apple-system, sans-serif;
+  --font-sans: "DM Sans", system-ui, -apple-system, sans-serif;
+  --color-leaf-primary: #2E7D32;
+  --color-leaf-primary-hover: #246628;
+  --color-leaf-light: #E8F5E9;
+  --color-leaf-canvas: #F7FAF7;
+  --color-leaf-amber: #F9A825;
+  --color-leaf-red: #C62828;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    font-size: 16px;
+    background-color: #F7FAF7;
+    color: #142216;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+@keyframes leaf-scan-sweep {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0.2;
+  }
+  15% {
+    opacity: 0.95;
+  }
+  85% {
+    opacity: 0.95;
+  }
+  100% {
+    transform: translateY(380%);
+    opacity: 0.2;
+  }
+}
+
+.animate-leaf-scan {
+  animation: leaf-scan-sweep 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-leaf-scan {
+    animation: none;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
